@@ -20,17 +20,17 @@ def add_to_argv(string_param: str):
 
 if __name__ == '__main__':
     # '--dataroot ./datasets/facades/testB/ --name facades_pix2pix --model test --netG unet_256 --direction BtoA --dataset_mode single --norm batch'
+    #' --dataroot ./datasets/facades --name facades_pix2pix --model pix2pix --netG unet_256 --direction BtoA --dataset_mode aligned --norm batch
 
-    dataroot = r'C:\work_space\code\cad_to_average\data\small_test\testb'
-    name = 'facades_label2photo'
-    model = 'test'
+    dataroot = r'C:\work_space\cad_to_average\datasets\test\cims'
+    name = 'cims'
+    model = 'pix2pix'
     direction = 'BtoA'
-    checkpoints_dir = r'C:\work_space\code\cad_to_average\checkpoints'
+    checkpoints_dir = r'C:\work_space\cad_to_average\datasets\test\checkpoints'
     dataset_mode = 'single'
     print_freq = 1000
     pool_size = 500
-    string_param = f'--dataroot {dataroot} --name {name} --model {model} --direction {direction} --checkpoints_dir {checkpoints_dir} \
-    --dataset_mode {dataset_mode} --netG unet_256 --norm batch --print_freq {print_freq} --pool_size {pool_size}'
+    string_param = f'--dataroot {dataroot} --name {name} --model {model} --direction {direction} --checkpoints_dir {checkpoints_dir} --norm batch'
     add_to_argv(string_param)
 
 
